@@ -1,0 +1,28 @@
+{
+  "name": "the-tailors-tale-backend",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "homepage": "https://github.com/thetailorstale07-sys/the-tailors-tale-backend#readme",
+  "bugs": {
+    "url": "https://github.com/thetailorstale07-sys/the-tailors-tale-backend/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thetailorstale07-sys/the-tailors-tale-backend.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "firebase-admin": "^13.10.0",
+    "nodemon": "^3.1.14"
+  }
+}
