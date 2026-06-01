@@ -10,22 +10,16 @@ const app = express();
 app.use(cors());
 app.use(express.json({ limit: '2mb' }));
 
-app.get("/users", async (req, res) => {
+app.get("/projects", async (req, res) => {
     try {
-      const snapshot = await db.ref("users").get();
+      const snapshot = await db.ref("projects").get();
       if (!snapshot.exists()) {
         return res.status(404).json({ error: "No users found" });
       }
   
-      const users = snapshot.val();
+      const projects = snapshot.val();
   
-      // Convert object to array with email as id
-      const userList = Object.keys(users).map((key) => ({
-        id: key.replace(/_/g, "."),
-        ...users[key],
-      }));
-  
-      res.json({ users: userList });
+      res.json({ projects});
     } catch (err) {
       console.error("Get users error:", err);
       res.status(500).json({ error: err.message });
